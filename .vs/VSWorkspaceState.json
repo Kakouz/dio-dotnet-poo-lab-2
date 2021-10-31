@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\bin\\Debug",
+    "\\bin\\Debug\\net5.0",
+    "\\bin\\Debug\\net5.0\\ref",
+    "\\Classes",
+    "\\Enum",
+    "\\Interfaces",
+    "\\obj"
+  ],
+  "SelectedNode": "\\Classes\\AnimeRepositorio.cs",
+  "PreviewInSolutionExplorer": false
+}
