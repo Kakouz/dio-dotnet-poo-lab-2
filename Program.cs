@@ -4,7 +4,7 @@ namespace DIO.Animes
 {
     class Program
     {
-        static AnimeRepositorio = new AnimeRepositorio();
+        static animeRepositorio repositorio = new animeRepositorio();
         static void Main(string[] args)
         {
             string opcaoUsuario = ObterOpcaoUsuario();
@@ -14,19 +14,19 @@ namespace DIO.Animes
 				switch (opcaoUsuario)
 				{
 					case "1":
-						ListarAnimes();
+						ListarAnime();
 						break;
 					case "2":
-						InserirAnimes();
+						InserirAnime();
 						break;
 					case "3":
-						AtualizarAnimes();
+						AtualizarAnime();
 						break;
 					case "4":
-						ExcluirAnimes();
+						ExcluirAnime();
 						break;
 					case "5":
-						VisualizarAnimes();
+						VisualizarAnime();
 						break;
 					case "C":
 						Console.Clear();
@@ -43,7 +43,7 @@ namespace DIO.Animes
 			Console.ReadLine();
         }
 
-        private static void ExcluirAnimes()
+        private static void ExcluirAnime()
 		{
 			Console.Write("Digite o id do anime: ");
 			int indiceAnime = int.Parse(Console.ReadLine());
@@ -51,7 +51,7 @@ namespace DIO.Animes
 			repositorio.Exclui(indiceAnime);
 		}
 
-        private static void VisualizarAnimes()
+        private static void VisualizarAnime()
 		{
 			Console.Write("Digite o id do Anime: ");
 			int indiceAnime = int.Parse(Console.ReadLine());
@@ -61,7 +61,7 @@ namespace DIO.Animes
 			Console.WriteLine(anime);
 		}
 
-        private static void AtualizarAnimes()
+        private static void AtualizarAnime()
 		{
 			Console.Write("Digite o id do anime: ");
 			int indiceAnime = int.Parse(Console.ReadLine());
@@ -84,7 +84,7 @@ namespace DIO.Animes
 			Console.Write("Digite a Descrição do anime: ");
 			string entradaDescricao = Console.ReadLine();
 
-			Anime atualizaAnime = new Anime(id: indiceSerie,
+			Anime atualizaAnime = new Anime(id: indiceAnime,
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
@@ -92,9 +92,9 @@ namespace DIO.Animes
 
 			repositorio.Atualiza(indiceAnime, atualizaAnime);
 		}
-        private static void ListarAnimes()
+        private static void ListarAnime()
 		{
-			Console.WriteLine("Listar animes");
+			Console.WriteLine("Listar Anime");
 
 			var lista = repositorio.Lista();
 
@@ -106,13 +106,13 @@ namespace DIO.Animes
 
 			foreach (var anime in lista)
 			{
-                var excluido = serie.retornaExcluido();
+                var excluido = anime.retornaExcluido();
                 
 				Console.WriteLine("#ID {0}: - {1} {2}", anime.retornaId(), anime.retornaTitulo(), (excluido ? "*Excluído*" : ""));
 			}
 		}
 
-        private static void InserirAnimes()
+        private static void InserirAnime()
 		{
 			Console.WriteLine("Inserir novo anime");
 
@@ -146,10 +146,10 @@ namespace DIO.Animes
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("Catalogo de animes seu dispor!!!");
+			Console.WriteLine("Catalogo de Anime seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
-			Console.WriteLine("1- Listar animes");
+			Console.WriteLine("1- Listar Anime");
 			Console.WriteLine("2- Inserir novo anime");
 			Console.WriteLine("3- Atualizar anime");
 			Console.WriteLine("4- Excluir anime");

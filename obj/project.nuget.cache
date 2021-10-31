@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3WyFcI/BoU3Za2tUiX4R+4K7kHCzXVQIza69ip1iywzCSzTrzTqamxzC/Pb36AYL40/RBFzdUbcDpzWBCtXGJQ==",
+  "dgSpecHash": "Jdhh0zyW76juhFxvyhah98t30iehldWNdsRJVSoIZzqRASWYy6rj1WAUa0fanD7CvlKhg3HQY8FDRMXGXdxgEg==",
   "success": true,
-  "projectFilePath": "/home/eliezer/sandbox/dio/DIO.Series/DIO.Series.csproj",
+  "projectFilePath": "C:\\workspace\\DIO.Series.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -4,7 +4,7 @@ using DIO.Animes.Interfaces;
 
 namespace DIO.Animes
 {
-	public class AnimeRepositorio : IRepositorio<Anime>
+	public class animeRepositorio : IRepositorio<Anime>
 	{
         private List<Anime> listaAnime = new List<Anime>();
 		public void Atualiza(int id, Anime objeto)
