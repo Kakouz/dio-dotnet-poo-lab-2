@@ -63,7 +63,7 @@ namespace DIO.Series
 
         private static void AtualizarSerie()
 		{
-			Console.Write("Digite o id da série: ");
+			Console.Write("Digite o id do anime: ");
 			int indiceSerie = int.Parse(Console.ReadLine());
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
@@ -75,13 +75,13 @@ namespace DIO.Series
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write("Digite o Título do anime: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("Digite o Ano de Início do anime: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("Digite a Descrição do anime: ");
 			string entradaDescricao = Console.ReadLine();
 
 			Serie atualizaSerie = new Serie(id: indiceSerie,
@@ -94,13 +94,13 @@ namespace DIO.Series
 		}
         private static void ListarSeries()
 		{
-			Console.WriteLine("Listar séries");
+			Console.WriteLine("Listar animes");
 
 			var lista = repositorio.Lista();
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhuma série cadastrada.");
+				Console.WriteLine("Nenhum anime cadastrada.");
 				return;
 			}
 
@@ -114,7 +114,7 @@ namespace DIO.Series
 
         private static void InserirSerie()
 		{
-			Console.WriteLine("Inserir nova série");
+			Console.WriteLine("Inserir novo anime");
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -125,13 +125,13 @@ namespace DIO.Series
 			Console.Write("Digite o gênero entre as opções acima: ");
 			int entradaGenero = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite o Título da Série: ");
+			Console.Write("Digite o Título do Anime: ");
 			string entradaTitulo = Console.ReadLine();
 
-			Console.Write("Digite o Ano de Início da Série: ");
+			Console.Write("Digite o Ano de Início do anime: ");
 			int entradaAno = int.Parse(Console.ReadLine());
 
-			Console.Write("Digite a Descrição da Série: ");
+			Console.Write("Digite a Descrição do anime: ");
 			string entradaDescricao = Console.ReadLine();
 
 			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
@@ -146,14 +146,14 @@ namespace DIO.Series
         private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Séries a seu dispor!!!");
+			Console.WriteLine("Catalogo de animes seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
-			Console.WriteLine("1- Listar séries");
-			Console.WriteLine("2- Inserir nova série");
-			Console.WriteLine("3- Atualizar série");
-			Console.WriteLine("4- Excluir série");
-			Console.WriteLine("5- Visualizar série");
+			Console.WriteLine("1- Listar animes");
+			Console.WriteLine("2- Inserir novo anime");
+			Console.WriteLine("3- Atualizar anime");
+			Console.WriteLine("4- Excluir anime");
+			Console.WriteLine("5- Visualizar anime");
 			Console.WriteLine("C- Limpar Tela");
 			Console.WriteLine("X- Sair");
 			Console.WriteLine();
