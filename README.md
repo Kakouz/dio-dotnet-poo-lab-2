@@ -6,16 +6,14 @@
 
 ## Contato
 
-Eliézer Zarpelão
+Tiago Felix Prudente
 
-Linkedin:  [br.linkedin.com/in/eliezerzarpelao](http://br.linkedin.com/in/eliezerzarpelao)
+Linkedin:  [br.linkedin.com/in/tiago-prudente](http://br.linkedin.com/in/tiago-prudente)
 
-WebSite:  [eliezerzarpelao.eti.br](https://eliezerzarpelao.eti.br)
+WebSite:  [kakouz.github.io](https://kakouz.github.io)
 
-Instagram:  [instagram.com/eliezerzarpelao](https://instagram.com/eliezerzarpelao)
+Instagram:  [instagram.com/tfprudente](https://instagram.com/tfprudente)
 
-YouTube:  [youtube.com/channel/UC47RD-s-U6fpKTY0soIUn6g](https://www.youtube.com/channel/UC47RD-s-U6fpKTY0soIUn6g/featured?view_as=subscriber)
+Twitter:  [@tfprudente](https://twitter.com/tfprudente)
 
-Twitter:  [@eliezerzarpelao](https://twitter.com/eliezerzarpelao)
-
-Github:  [github.com/elizarp](https://github.com/elizarp)
+Github:  [github.com/kakouz](https://github.com/kakouz)
