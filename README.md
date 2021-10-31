@@ -4,7 +4,7 @@
 
 Por ser um cadastro de séries, decidi modificar um pouco para ser um cadastro de animes.
 
-##Como utilizar?
+## Como utilizar?
 Clone esse repositorio ou baixe os arquivos e use na pasta do arquivo no terminal o comando dotnet run.
 
 *Necessário o .net 5.0 para esse programa rodar*
@@ -25,5 +25,5 @@ Twitter:  [@tfprudente](https://twitter.com/tfprudente)
 
 Github:  [github.com/kakouz](https://github.com/kakouz)
 
-#UTILIZEI OS ARQUIVOS BASE DO PROJETO DO PROFESSOR NA DIGITAL INNOVATION ONE - DIO.
-#TODOS OS DIREITOS RESERVADOS A ELES!
+# UTILIZEI OS ARQUIVOS BASE DO PROJETO DO PROFESSOR NA DIGITAL INNOVATION ONE - DIO.
+# TODOS OS DIREITOS RESERVADOS A ELES!
