@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace DIO.Series
+namespace DIO.Animes
 {
     class Program
     {
-        static SerieRepositorio repositorio = new SerieRepositorio();
+        static AnimeRepositorio = new AnimeRepositorio();
         static void Main(string[] args)
         {
             string opcaoUsuario = ObterOpcaoUsuario();
@@ -14,19 +14,19 @@ namespace DIO.Series
 				switch (opcaoUsuario)
 				{
 					case "1":
-						ListarSeries();
+						ListarAnimes();
 						break;
 					case "2":
-						InserirSerie();
+						InserirAnimes();
 						break;
 					case "3":
-						AtualizarSerie();
+						AtualizarAnimes();
 						break;
 					case "4":
-						ExcluirSerie();
+						ExcluirAnimes();
 						break;
 					case "5":
-						VisualizarSerie();
+						VisualizarAnimes();
 						break;
 					case "C":
 						Console.Clear();
@@ -43,28 +43,28 @@ namespace DIO.Series
 			Console.ReadLine();
         }
 
-        private static void ExcluirSerie()
-		{
-			Console.Write("Digite o id da série: ");
-			int indiceSerie = int.Parse(Console.ReadLine());
-
-			repositorio.Exclui(indiceSerie);
-		}
-
-        private static void VisualizarSerie()
-		{
-			Console.Write("Digite o id da série: ");
-			int indiceSerie = int.Parse(Console.ReadLine());
-
-			var serie = repositorio.RetornaPorId(indiceSerie);
-
-			Console.WriteLine(serie);
-		}
-
-        private static void AtualizarSerie()
+        private static void ExcluirAnimes()
 		{
 			Console.Write("Digite o id do anime: ");
-			int indiceSerie = int.Parse(Console.ReadLine());
+			int indiceAnime = int.Parse(Console.ReadLine());
+
+			repositorio.Exclui(indiceAnime);
+		}
+
+        private static void VisualizarAnimes()
+		{
+			Console.Write("Digite o id do Anime: ");
+			int indiceAnime = int.Parse(Console.ReadLine());
+
+			var anime = repositorio.RetornaPorId(indiceAnime);
+
+			Console.WriteLine(anime);
+		}
+
+        private static void AtualizarAnimes()
+		{
+			Console.Write("Digite o id do anime: ");
+			int indiceAnime = int.Parse(Console.ReadLine());
 
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getvalues?view=netcore-3.1
 			// https://docs.microsoft.com/pt-br/dotnet/api/system.enum.getname?view=netcore-3.1
@@ -84,15 +84,15 @@ namespace DIO.Series
 			Console.Write("Digite a Descrição do anime: ");
 			string entradaDescricao = Console.ReadLine();
 
-			Serie atualizaSerie = new Serie(id: indiceSerie,
+			Anime atualizaAnime = new Anime(id: indiceSerie,
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
 										descricao: entradaDescricao);
 
-			repositorio.Atualiza(indiceSerie, atualizaSerie);
+			repositorio.Atualiza(indiceAnime, atualizaAnime);
 		}
-        private static void ListarSeries()
+        private static void ListarAnimes()
 		{
 			Console.WriteLine("Listar animes");
 
@@ -100,19 +100,19 @@ namespace DIO.Series
 
 			if (lista.Count == 0)
 			{
-				Console.WriteLine("Nenhum anime cadastrada.");
+				Console.WriteLine("Nenhum anime cadastrado.");
 				return;
 			}
 
-			foreach (var serie in lista)
+			foreach (var anime in lista)
 			{
                 var excluido = serie.retornaExcluido();
                 
-				Console.WriteLine("#ID {0}: - {1} {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "*Excluído*" : ""));
+				Console.WriteLine("#ID {0}: - {1} {2}", anime.retornaId(), anime.retornaTitulo(), (excluido ? "*Excluído*" : ""));
 			}
 		}
 
-        private static void InserirSerie()
+        private static void InserirAnimes()
 		{
 			Console.WriteLine("Inserir novo anime");
 
@@ -134,13 +134,13 @@ namespace DIO.Series
 			Console.Write("Digite a Descrição do anime: ");
 			string entradaDescricao = Console.ReadLine();
 
-			Serie novaSerie = new Serie(id: repositorio.ProximoId(),
+			Anime novoAnime = new Anime(id: repositorio.ProximoId(),
 										genero: (Genero)entradaGenero,
 										titulo: entradaTitulo,
 										ano: entradaAno,
 										descricao: entradaDescricao);
 
-			repositorio.Insere(novaSerie);
+			repositorio.Insere(novoAnime);
 		}
 
         private static string ObterOpcaoUsuario()
