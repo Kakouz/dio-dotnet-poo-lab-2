@@ -2,6 +2,8 @@
 
 ## Criando uma APP de cadastro em memória
 
+Por ser um cadastro de séries, decidir modificar um pouco para ser um cadastro de animes.
+
 [Slides](dio-dotnet-poo-lab-2.pdf)
 
 ## Contato
